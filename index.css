@@ -1,0 +1,88 @@
+:root{
+    --sixe : 30px ;
+}
+*{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+    padding:var(--sixe) 60px ;
+    background-color: black;
+    margin: 0;
+    position: relative;
+}
+body::after{
+    content: "";
+    background-image: linear-gradient( to right ,  rgba(0, 0, 52, 0.846) , rgba(1, 1, 70, 0.513)  );
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container{
+    padding: 0 5%;
+    height: calc(100% - 2 * var(--sixe));
+    background: url("avatar.webp") no-repeat center/cover ;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav p{
+    font-size: 40px;
+    font-weight: bold;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.container * {
+    z-index: 2;
+}
+
+.content{
+    margin-top: 100px ;
+    position: relative;
+    width: 30%;
+    line-height: 30px;
+    justify-self: center;
+}
+
+.content h1{
+    font-size: 100px;
+}
+.content p{
+    text-align: justify;
+    font-size: 20px;
+}
+.content button{
+    color: black;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: white 2px solid;
+    border-radius: 10px;
+}
+.content button:hover{
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+
